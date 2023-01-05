@@ -3,10 +3,13 @@ import Button from "./components/Button";
 import { GoBell, GoDeviceCameraVideo, GoFlame } from "react-icons/go";
 
 function App() {
+  const handleClick = () => {
+    console.log("cliicked");
+  };
   return (
     <div>
       <div>
-        <Button success>
+        <Button className="my-5" success onClick={handleClick}>
           <GoBell />
           Click me
         </Button>
