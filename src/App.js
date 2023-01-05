@@ -1,17 +1,27 @@
 import React, { Children } from "react";
 import Button from "./components/Button";
+import { GoBell, GoDeviceCameraVideo, GoFlame } from "react-icons/go";
 
 function App() {
   return (
     <div>
       <div>
-        <Button success>Click me</Button>
+        <Button success>
+          <GoBell />
+          Click me
+        </Button>
       </div>
       <div>
-        <Button primary>Buy Now</Button>
+        <Button primary>
+          <GoFlame />
+          Buy Now
+        </Button>
       </div>
       <div>
-        <Button warning>Close</Button>
+        <Button warning>
+          <GoDeviceCameraVideo />
+          Close
+        </Button>
       </div>
       <div>
         <Button danger>Something!</Button>
