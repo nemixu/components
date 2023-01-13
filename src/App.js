@@ -1,49 +1,24 @@
-import React, { Children } from "react";
-import Button from "./components/Button";
-import { GoBell, GoDeviceCameraVideo, GoFlame } from "react-icons/go";
+import Accordion from "./components/Accordion";
 
 function App() {
-  const handleClick = () => {
-    console.log("cliicked");
-  };
-  return (
-    <div>
-      <div>
-        <Button className="my-5" success onClick={handleClick}>
-          <GoBell />
-          Click me
-        </Button>
-      </div>
-      <div>
-        <Button primary>
-          <GoFlame />
-          Buy Now
-        </Button>
-      </div>
-      <div>
-        <Button warning>
-          <GoDeviceCameraVideo />
-          Close
-        </Button>
-      </div>
-      <div>
-        <Button danger>Something!</Button>
-      </div>
-      <div>
-        <Button secondary outline rounded>
-          Next
-        </Button>
-      </div>
-      <div>
-        <Button rounded success>
-          Previous
-        </Button>
-      </div>
-      <div>
-        <Button outline>Test</Button>
-      </div>
-    </div>
-  );
+  const items = [
+    {
+      id: "wrtyys",
+      label: "Can I use react on a project",
+      content: "You can use react on any project",
+    },
+    {
+      id: "jkshdfujhbv",
+      label: "Can I use css on a project",
+      content: "You can use css on any project",
+    },
+    {
+      id: "qwetyuhc",
+      label: "Can I use Javascript on a project",
+      content: "You can use Javascript on any project",
+    },
+  ];
+  return <Accordion items={items} />;
 }
 
 export default App;
